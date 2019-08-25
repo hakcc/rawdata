@@ -1,0 +1,147 @@
+{
+    "name": "clear",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "vkGRJ",
+    "actions": [
+      {
+        "condition": "0",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "17",
+        "name": "Check Parameters"
+      },
+      {
+        "info": "0",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "amount",
+        "name": "Store Command Params"
+      },
+      {
+        "channel": "0",
+        "count": "${tempVars(\"amount\")}",
+        "condition": "0",
+        "custom": "",
+        "varName": "",
+        "name": "Delete Bulk Messages"
+      },
+      {
+        "storage": "0",
+        "varName": "",
+        "name": "Delete Message"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "🔥 **${member} удалил ${tempVars(\"amount\")} сообщений!**",
+        "storage": "1",
+        "varName2": "msgg",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "time": "15",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msgg",
+        "name": "Delete Message"
+      },
+      {
+        "info": "1",
+        "find": "logs",
+        "storage": "1",
+        "varName": "logs",
+        "name": "Find Channel"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "22",
+        "storage": "1",
+        "varName2": "member",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "1",
+        "storage": "1",
+        "varName2": "id",
+        "name": "Store Member Info"
+      },
+      {
+        "message": "0",
+        "varName": "",
+        "info": "4",
+        "storage": "1",
+        "varName2": "channel",
+        "name": "Store Message Info"
+      },
+      {
+        "title": "Deleted messages logs",
+        "author": "",
+        "color": "#ff1515",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "timestamp": "true",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "embed",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "Используемая команда: `@clear`\nКанал: ${tempVars(\"channel\")}\nКоличество удаленных сообщений: `${tempVars(\"amount\")}`\nУчастник: `${tempVars(\"member\")}`",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "message": "ID: ${tempVars(\"id\")}",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "embed",
+        "channel": "5",
+        "varName2": "logs",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": ":negative_squared_cross_mark: *Пожалуйста, укажите количество!*",
+        "storage": "0",
+        "varName2": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      }
+    ],
+    "comType": "0"
+  }

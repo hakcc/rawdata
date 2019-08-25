@@ -1,0 +1,201 @@
+{
+    "name": "rps",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "eNrTJ",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "username",
+        "name": "Store Member Info"
+      },
+      {
+        "storage": "1",
+        "varName": "list1",
+        "name": "Create List"
+      },
+      {
+        "storage": "1",
+        "varName": "list1",
+        "addType": "0",
+        "position": "",
+        "value": "\"Камень\"",
+        "name": "Add Item to List"
+      },
+      {
+        "storage": "1",
+        "varName": "list1",
+        "addType": "0",
+        "position": "",
+        "value": "\"Бумага\"",
+        "name": "Add Item to List"
+      },
+      {
+        "storage": "1",
+        "varName": "list1",
+        "addType": "0",
+        "position": "",
+        "value": "\"Ножницы\"",
+        "name": "Add Item to List"
+      },
+      {
+        "list": "7",
+        "varName": "list1",
+        "getType": "2",
+        "position": "",
+        "storage": "1",
+        "varName2": "botplyed",
+        "name": "Get Item from List"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "${member} выбери \n\n``Камень, Ножницы, Бумага``\n\n**Напиши в чат**",
+        "storage": "1",
+        "varName2": "chose",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "storage": "0",
+        "varName": "",
+        "filter": "content.length > 0",
+        "max": "1",
+        "time": "60000",
+        "iftrue": "0",
+        "iftrueVal": "17",
+        "iffalse": "2",
+        "iffalseVal": "17",
+        "storage2": "1",
+        "varName2": "memberplayed",
+        "name": "Await Response Call Action"
+      },
+      {
+        "title": "",
+        "author": "",
+        "color": "BLUE",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "embad",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "embad",
+        "fieldName": "**Камень,Ножницы,Бумага** (${tempVars(\"username\")})",
+        "message": "Ты выбрал **${tempVars(\"memberplayed\")}**, но я выбрал **${tempVars(\"botplyed\")}**.",
+        "inline": "0",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "embad",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Embed Message"
+      },
+      {
+        "time": "30",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "memberplayed",
+        "name": "Delete Message"
+      },
+      {
+        "time": "20",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "chose",
+        "name": "Delete Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "title": "",
+        "author": "",
+        "color": "RED",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "error",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "error",
+        "message": "Время вышло!",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "error",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "1",
+        "varName3": "errpr.delete",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Embed Message"
+      },
+      {
+        "time": "10",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "errpr.delete",
+        "name": "Delete Message"
+      },
+      {
+        "time": "1000",
+        "measurement": "0",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "chose",
+        "name": "Delete Message"
+      }
+    ]
+  }

@@ -1,0 +1,208 @@
+{
+    "name": "serverinfo",
+    "permissions": "NONE",
+    "restriction": "0",
+    "_id": "GvIBG",
+    "actions": [
+      {
+        "server": "0",
+        "varName": "",
+        "info": "5",
+        "storage": "1",
+        "varName2": "SI Icon",
+        "name": "Store Server Info"
+      },
+      {
+        "info": "1",
+        "find": "offline",
+        "storage": "1",
+        "varName": "of",
+        "name": "Find Custom Emoji"
+      },
+      {
+        "info": "1",
+        "find": "online",
+        "storage": "1",
+        "varName": "on",
+        "name": "Find Custom Emoji"
+      },
+      {
+        "info": "1",
+        "find": "idle",
+        "storage": "1",
+        "varName": "idle",
+        "name": "Find Custom Emoji"
+      },
+      {
+        "info": "1",
+        "find": "dnd",
+        "storage": "1",
+        "varName": "dnd",
+        "name": "Find Custom Emoji"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "4",
+        "storage": "1",
+        "varName2": "SI Region",
+        "name": "Store Server Info"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "11",
+        "storage": "1",
+        "varName2": "SI Owner",
+        "name": "Store Server Info"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "29",
+        "storage": "1",
+        "varName2": "SI idle",
+        "name": "Store Server Info"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "9",
+        "storage": "1",
+        "varName2": "SI Users",
+        "name": "Store Server Things"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "8",
+        "storage": "1",
+        "varName2": "SI Users DND",
+        "name": "Store Server Things"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "0",
+        "storage": "1",
+        "varName2": "SI Create",
+        "name": "Store Server Things"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "10",
+        "storage": "1",
+        "varName2": "SI Users Offline",
+        "name": "Store Server Things"
+      },
+      {
+        "server": "0",
+        "varName": "",
+        "info": "18",
+        "storage": "1",
+        "varName2": "SI member Count",
+        "name": "Store Server Things"
+      },
+      {
+        "title": "",
+        "author": "Информация о сервере",
+        "color": "#363942",
+        "url": "",
+        "authorIcon": "${tempVars(\"SI Icon\")}",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "${tempVars(\"SI Icon\")}",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "Embeded SI",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "fieldName": "Создатель",
+        "message": "${tempVars(\"SI Owner\")}",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "fieldName": "Регион",
+        "message": "${tempVars(\"SI Region\")}",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "fieldName": "Всего участников",
+        "message": "${tempVars(\"SI member Count\")}",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "fieldName": "Пользователей в сети",
+        "message": "${tempVars(\"on\")} `${tempVars(\"SI Users\")}`",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "fieldName": "Пользователей нет на месте",
+        "message": "${tempVars(\"idle\")} `${tempVars(\"SI idle\")}`",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "fieldName": "Пользователей просили не беспокоить",
+        "message": "${tempVars(\"dnd\")} `${tempVars(\"SI Users DND\")}`",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "fieldName": "Пользователей не в сети",
+        "message": "${tempVars(\"of\")} `${tempVars(\"SI Users Offline\")}`",
+        "inline": "1",
+        "name": "Add Embed Field"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "message": "",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "message": "Сервер создан:\n${tempVars(\"SI Create\")}",
+        "footerIcon": "",
+        "name": "Set Embed Footer"
+      },
+      {
+        "storage": "1",
+        "varName": "Embeded SI",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "0",
+        "varName3": "",
+        "name": "Send Embed Message"
+      }
+    ]
+  }

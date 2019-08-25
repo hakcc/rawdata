@@ -1,0 +1,239 @@
+{
+    "name": "report",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "jsexV",
+    "actions": [
+      {
+        "storage": "0",
+        "varName": "",
+        "name": "Delete Message"
+      },
+      {
+        "info": "0",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "param.1",
+        "name": "Store Command Params"
+      },
+      {
+        "info": "2",
+        "infoIndex": "1",
+        "storage": "1",
+        "varName": "user",
+        "name": "Store Command Params"
+      },
+      {
+        "info": "1",
+        "infoIndex": "2",
+        "storage": "1",
+        "varName": "reason",
+        "name": "Store Command Params"
+      },
+      {
+        "storage": "1",
+        "varName": "param.1",
+        "comparison": "1",
+        "value": "\"${member}\"",
+        "iftrue": "2",
+        "iftrueVal": "23",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Variable"
+      },
+      {
+        "condition": "1",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "2",
+        "iffalseVal": "17",
+        "name": "Check Parameters"
+      },
+      {
+        "info": "1",
+        "find": "report",
+        "storage": "1",
+        "varName": "reported",
+        "name": "Find Channel"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "info": "1",
+        "storage": "1",
+        "varName2": "id",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "0",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "AVATAR",
+        "name": "Store Member Info"
+      },
+      {
+        "title": "**Жалоба на участника**",
+        "author": "",
+        "color": "#E60EF1",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "timestamp": "true",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "reported4",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "reported4",
+        "message": "Информация о пользователе :arrow_down: \n\n• **Ник** => ${tempVars(\"user\")}\n• **Причина** => ${tempVars(\"reason\")}",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "reported4",
+        "channel": "5",
+        "varName2": "reported",
+        "name": "Send Embed Message"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Мы отправили ваш **репорт** команде модераторов.",
+        "storage": "1",
+        "varName2": "send",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "time": "5",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "send",
+        "name": "Delete Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "title": ":x: | Неверный формат!",
+        "author": "",
+        "color": "#ff2400",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "em",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "em",
+        "message": "**~~~~~>** ``>report {@user} {причина}``\n",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "em",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "1",
+        "varName3": "msgg",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Embed Message"
+      },
+      {
+        "time": "15",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msgg",
+        "name": "Delete Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "title": "",
+        "author": "",
+        "color": "#ff2400",
+        "url": "",
+        "authorIcon": "",
+        "authorUrl": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "timestamp": "false",
+        "debug": "false",
+        "text": "",
+        "year": "",
+        "month": "",
+        "day": "",
+        "hour": "",
+        "minute": "",
+        "second": "",
+        "storage": "1",
+        "varName": "em2",
+        "name": "Create Embed Message"
+      },
+      {
+        "storage": "1",
+        "varName": "em2",
+        "message": ":x: | Зачем отправлять жалобу на себя?",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "em2",
+        "channel": "0",
+        "varName2": "",
+        "storage3": "1",
+        "varName3": "msgg2",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Embed Message"
+      },
+      {
+        "time": "15",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "msgg2",
+        "name": "Delete Message"
+      }
+    ],
+    "_aliases": [],
+    "comType": "0"
+  }
