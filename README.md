@@ -38,4 +38,4 @@
 ## У меня есть вопросы...
 Я всегда готов ответить вам в Discord, добавляйтесь! :smiley:	
 
-![hakcc#2896](https://i.imgur.com/JJikVnE.png)
+`hakcc#2896`
